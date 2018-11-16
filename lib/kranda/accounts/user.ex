@@ -1,4 +1,10 @@
 defmodule Kranda.Accounts.User do
-  alias Kranda.Accounts.User
-  defstruct [:id, :name, :username]
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  schema "users" do
+    field :name, :string
+    field :username, :string
+    timestamps()
+  end
 end
