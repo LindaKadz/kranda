@@ -68,8 +68,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :kranda, Kranda.Repo,
-  username: "linda",
-  password: "postgres",
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASS"),
   database: "kranda_dev",
   hostname: "localhost",
   pool_size: 10
